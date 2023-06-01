@@ -1,6 +1,3 @@
-# Refer to https://www.aerospike.com/docs/connectors/enterprise/kafka/outbound/configuration/index.html
-# for details.
-
 # The connector's listening ports, TLS and network interface.
 service:
   port: 8080
@@ -18,8 +15,9 @@ routing:
 # Kafka producer initialization properties.
 producer-props:
   bootstrap.servers:
-    - Joe:9092
+    - broker:9092
+
 
 # The logging properties.
-logging:
-  enable-console-logging: true
+#logging:
+#  file: /var/log/aerospike-kafka-outbound/aerospike-kafka-outbound.log
