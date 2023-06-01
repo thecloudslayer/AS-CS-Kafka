@@ -1,0 +1,25 @@
+# Refer to https://www.aerospike.com/docs/connectors/enterprise/kafka/outbound/configuration/index.html
+# for details.
+
+# The connector's listening ports, TLS and network interface.
+service:
+  port: 8080
+
+# Format of the Kafka destination message.
+format:
+  mode: flat-json
+  metadata-key: metadata
+
+# Aerospike record routing to a Kafka destination.
+routing:
+  mode: static
+  destination: quickstart
+
+# Kafka producer initialization properties.
+producer-props:
+  bootstrap.servers:
+    - Joe:9092
+
+# The logging properties.
+logging:
+  enable-console-logging: true
