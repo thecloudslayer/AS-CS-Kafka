@@ -21,3 +21,7 @@ docker exec --interactive --tty broker \
 kafka-console-consumer --bootstrap-server broker:9092 \
                        --topic quickstart \
                        --from-beginning
+
+## Send data to Aerospike 
+
+node write.js
